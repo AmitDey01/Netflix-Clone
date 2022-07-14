@@ -1,370 +1,598 @@
-:root{
-    --primary-color: #e50914;
-    --dark-color: #141414;
-    --light-color: #f4f4f4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #000000;
-    color: #999999;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+}
+/* HEADER SECTION STARTS */
+.showcase {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/7645af9d-2679-4f54-b57d-3a6b5c670e14/IN-en-20220711-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    no-repeat center center/cover;
+    
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+/*NAVBAR*/
+.showcase-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  padding: 26px 0px 0px 55px;
 }
 
-ul{
-    list-style: none;
+.nav__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-right: 50px;
 }
 
-h1,h2,h3,h4{
-    color: #ffffff;
+.showcase-top #logo {
+  height: 35px;
+}
+.showcase-top .submit {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 4px 16px;
+  border-radius: 4px;
+  height: 35px;
+  /* float: right; */
+  /* position: relative; */
+  /* right: 55px; */
 }
 
-h3{
-    font-weight: lighter;
+/* .showcase-top select {
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  float: right;
+  position: relative;
+  right: 85px;
+}*/
+
+/* .showcase-top select option {
+  /* color: black; */
+/* } */ */
+
+#drop_container{
+  /* color: #000000; */
 }
 
-a{
-    color: #ffffff;
-    text-decoration: none;
+.language_drop_down {
+  background: transparent;
+  background-color: #000000;
+  border: none;
+  color: white;
+}
+.dropdown__container {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-p{
-    margin: 0.5rem 0;
-    font-weight: bold;
-    color: #ffffff;
+.fa-globe {
+  color: white;
 }
 
-img{
-    width: 100%;
+/*GET STARTED*/
+.showcase .get-started-container {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  position: relative;
+  top: 180px;
+  width: 100%;
+}
+.showcase .get-started-container h1,
+p {
+  color: white;
+}
+.showcase .get-started-container h1 {
+  font-size: 3.9rem;
+}
+.showcase .get-started-container .para-1 {
+  font-size: 1.7rem;
+}
+.showcase .get-started-container .para-2 {
+  font-size: 1.2rem;
+}
+.showcase .get-started-container input {
+  width: 35%;
+  padding: 22px;
+  border: none;
+  margin-top: 0.5%;
+  outline: none;
+}
+.showcase .get-started-container button {
+  /* font-size: large; */
+  padding: 22px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  margin-left: -0.3%;
+  /* font-weight: bold; */
+}
+/*HEADER SECTION ENDS*/
+
+/* MAIN SECTION STARTS */
+/* ENJOY ON YOUR TV */
+.main-section .section-container {
+  border-top: 8px solid #222;
+  background-color: black;
+  display: flex;
+  padding: 0px 80px;
+  padding-bottom: 90px;
+}
+.main-section .section-container .left-column {
+  padding-top: 13%;
+  padding-right: 2%;
+}
+.main-section .section-container .left-column h1 {
+  color: white;
+}
+.main-section .section-container .left-column h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-top: 5%;
+}
+.main-section .section-container .right-column {
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  height: 500px;
+}
+.main-section .section-container .right-column img {
+  position: absolute;
+  width: 100%;
+}
+.main-section .section-container .right-column .video-1 {
+  margin-left: 13%;
+  margin-top: 16%;
+  width: 73%;
+}
+/*DOWNLOAD YOU SHOW TO WATCH OFFLINE*/
+.main-section .section2-container {
+  border-top: 8px solid #222;
+  background-color: black;
+  display: flex;
+  padding: 0px 80px;
+  padding-bottom: 90px;
+}
+.main-section .section2-container .left-column img {
+  width: 100%;
+}
+.main-section .section2-container .left-column .box {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: black;
+  border-radius: 10px;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: -22%;
+}
+.main-section .section2-container .left-column .box .boxshot {
+  width: 15%;
+}
+.main-section .section2-container .left-column .box p {
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.main-section .section2-container .left-column .box p a {
+  text-decoration: none;
+}
+.main-section .section2-container .left-column .box .download-gif {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  right: 0;
+}
+.main-section .section2-container .right-column {
+  padding-top: 13%;
+  padding-right: 2%;
+  width: 50%;
+}
+.main-section .section2-container .right-column h1 {
+  color: white;
+}
+.main-section .section2-container .right-column h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-top: 5%;
+}
+/*WATCH EVERY WHERE*/
+.main-section .section-container .right-column .video-2 {
+  margin-left: 19%;
+  margin-top: 8%;
+  width: 61%;
+}
+/*CREATE PROFILE FOR KIDS*/
+.main-section .section2-container .left-column img {
+  width: 100%;
 }
 
-.showcase{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background: url("IN-en-20220207-popsignuptwoweeks-perspective_alpha_website_large.jpg") no-repeat center center/cover;
+/* MAIN SECTION ENDS */
+
+/*QUESTION SECTION STARTS*/
+.question-container {
+  background-color: black;
+  border-top: 8px solid #222;
+  padding-top: 60px;
+}
+.question-container h1 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 3%;
+}
+.question-container button {
+  border: none;
+  background-color: #303030;
+  color: white;
+  width: 60%;
+  padding: 16px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+.question-container button img {
+  width: 3%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  right: 20px;
+}
+.question-container .answer1,
+.answer2,
+.answer3,
+.answer4,
+.answer5,
+.answer6 {
+  background-color: #303030;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 20px;
+  display: none;
+}
+/*QUESTION SECTION ENDS*/
+
+/*EMAIL ADDRESS STARTS*/
+.email-address-container {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: black;
+}
+.email-address-container input {
+  width: 35%;
+  padding: 22px;
+  border: none;
+  margin-top: 0.5%;
+  outline: none;
+}
+.email-address-container button {
+  padding: 22px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  margin-left: -0.3%;
+  font-weight: bold;
+}
+/*EMAIL ADDRESS ENDS*/
+
+/* FOOTER SECTION STARTS */
+footer {
+  background-color: black;
+  border-top: 8px solid #222;
+  padding: 75px 45px;
 }
 
-.showcase::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 120px 100px 250px #000000 , inset -120px -100px 250px #000000;
+.footer-card {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
-.showcase-top{
-    position: relative;
-    z-index: 2;
-    height: 90px;
+footer h5 {
+  color: #737373;
+  text-align: center;
+  padding-bottom: 1%;
+}
+footer .content {
+  max-width: 100%;
+  /* margin: 0px 90px; */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content .box {
+  width: 20%;
+  transition: all 0.4s ease;
+}
+footer .content p {
+  text-align: justify;
+}
+footer .content .middle {
+  padding-left: 80px;
+  padding-bottom: 20px;
+}
+footer .content .middle a {
+  line-height: 32px;
+  color: #737373;
+  text-decoration: none;
+}
+footer .content .middle a:hover {
+  text-decoration: underline;
+}
+footer .content .middle select {
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: white;
+}
+footer .content .middle select option {
+  background-color: black;
 }
 
-.showcase-top img{
-    width: 140px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(40% , -50%);
+.footer-top {
+  color: #737373;
+  margin: 0 0 30px;
+  padding-left: 190px;
 }
 
+.footer-top-a {
+  color: #737373;
+  text-decoration: none;
+}
 
-.showcase.language__drop__down {
-    background: transparent;
-    border: none;
-    color: white;
+#lang_container{
+  margin-left: 100px;
+  padding: 0.8rem;
+  margin-top: 0;
+  width: 120px;
+  background: black;
+}
+
+#lang_drop_down{
+  background-color: black;
+}
+.country{
+  margin-left: 100px;
+}
+/* FOOTER SECTION ENDS */
+
+/*RESPONSIVE CSS CODE*/
+@media (max-width: 1100px) {
+  footer .content .middle {
+    padding-left: 50px;
   }
-  
- .showcase .language__drop__down:focus {
-    outline: none;
-  }
-  
-  .showcase.dropdown__container {
-    border: 1px solid white;
-    padding: 0.4rem;
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-.showcase-top a{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-60% , -50%);
 }
 
-.showcase-content{
+@media (max-width: 943px) {
+  /*GET STARTED*/
+  .showcase .get-started-container {
     position: relative;
-    margin: 0 26%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-top: 9rem;
-}
-
-.showcase-content h1{
-    font-weight: 700;
-    font-size: 64px;
-    margin: 0 30px;
-    max-width: 800px;
-    line-height: 74.5px;
-}
-
-.showcase-content h3{
-    color: white;
-    font-size: 25px;
-    margin: 16px 0;
-}
-
-.showcase-content p{
-    font-size: 19.2px;
-    font-weight: 300;
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
-}
-
-.showcase-content input{
-    position: absolute;
-    left: 0;
-    bottom: -8vh;
-    width: 454px;
-    height: 3rem;
-    font-size: 1rem;
-    padding-left: 0.5rem;
-}
-
-.btn{
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-right: 0.5rem;
-    outline: none;
-    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
-}
-
-.btn:hover{
-    opacity: 0.9;
-}
-
-.btn-rounded{
-    border-radius: 5px;
-}
-
-.showcase-content .btn-lg{
-    position: absolute;
-    right: 0;
-    bottom: -8vh;
-    padding: 0.5rem 1.2rem;
+    top: 90px;
+  }
+  .showcase .get-started-container h1 {
+    font-size: 3.4rem;
+  }
+  .showcase .get-started-container .para-1 {
     font-size: 1.5rem;
-
-    height: 36px;
-    width: 14rem;
-}
-
-.card-0 , 
-.card-1,
-.card-2,
-.card-3{
-    border-top: 8px rgb(69, 69, 69) solid;
-    padding: 50px;
-}
-
-.card-0{
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 40% 50%;
-    text-align: left;
-    align-items: center;
-    padding: 25px 45px 50px;
-}
-
-.desc-0{
-    padding-left: 100px;
-}
-
-.card-1{
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 50% 40%;
-    text-align: left;
-    align-items: center;
-    padding: 25px 45px 50px;
-}
-
-.desc-1{
-    padding-left: 80px;
-}
-
-.style-cards h1{
-    font-size: 3rem;
-    padding: 1rem;
-    padding-left: 0;
-}
-
-.style-cards h3{
-    font-size: 1.6rem;
-    line-height: 2rem;
-}
-
-.card-1 video{
-    position: relative;
-    width: 100%;
-    height: 54%;
-    grid-column: 2/2;
-    grid-row: 1/2;
-    z-index: -1;
-}
-
-.card-1 img{
-    grid-column: 2/2;
-    grid-row: 1/2;
-}
-
-.card-2{
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 40% 50%;
-    text-align: left;
-    align-items: center;
-    padding: 25px 45px 50px;
-}
-
-.desc-2{
-    padding-left: 100px;
-}
-
-.card-3{
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 50% 40%;
-    text-align: left;
-    align-items: center;
-    padding: 25px 45px 50px;
-}
-
-.desc-3{
-    padding-left: 80px;
-    padding-right: 20px;
-}
-
-.card-3 img{
-    width: 110%;
-    grid-column: 2/2;
-    grid-row: 1/2;
-}
-
-.card-3 video{
-    position: relative;
-    top: -87px;
-    left: 125px;
-    width: 65%;
-    height: 78%;
-    grid-column: 2/2;
-    grid-row: 1/2;
-    z-index: -1;
-}
-
-.lastsec{
-    border-top: 8px rgb(69, 69, 69) solid;
-    padding: 50px;
-}
-
-.faq{
-    text-align: center;
-}
-
-.faq h1{
-    padding-bottom: 40px;
-    font-size: 3rem;
-}
-
-.questions{
+  }
+  .showcase .get-started-container .para-2 {
+    font-size: 1rem;
+  }
+  .showcase .get-started-container input {
+    padding: 17px;
+    width: 55%;
+  }
+  .showcase .get-started-container button {
+    display: block;
     display: flex;
-    flex-direction: column;
-    flex-basis: 40%;
     align-items: center;
-}
-
-.questions li{
-    padding: 20px 30px;
-    margin: 5px;
-    font-size: 1.6rem;
-    background-color: #303030;
-    color: white;
-    text-align: left;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    padding: 12px;
+  }
+  /*ENJOY ON YOUR TV*/
+  .main-section .section-container {
+    display: block;
+  }
+  .main-section .section-container .left-column {
+    width: 100%;
+    text-align: center;
+  }
+  .main-section .section-container .right-column {
+    width: 100%;
+  }
+  /*DOWNLOAD YOU SHOW TO WATCH OFFLINE*/
+  .main-section .section2-container {
+    display: block;
+  }
+  .main-section .section2-container .left-column {
+    width: 100%;
+  }
+  .main-section .section2-container .right-column {
+    width: 100%;
+    text-align: center;
+  }
+  /*EMAIL ADDRESS*/
+  .email-address-container input {
+    padding: 17px;
+    width: 55%;
+  }
+  .email-address-container button {
+    display: block;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    padding: 12px;
+  }
+  /* FOOTER SECTION */
+  footer .content .box {
     width: 50%;
+  }
 }
 
-.faq p{
-    padding-top: 60px;
-    font-size: 1.2rem;
-    font-weight: 200;
+@media (max-width: 774px) {
+  /* ENJOY ON YOUR TV */
+  .main-section .section-container {
+    padding-bottom: 0px;
+  }
 }
 
-.input{
-    display: inline-grid;
-    align-items: center;
-    grid-template-columns: 50% 40%;
-}
-
-.input input{
-    width: 600px;
-    height: 3rem;
-}
-
-.input button{
-    height: 3.25rem;
-    width: 320px;
-    left: 20px;
-    text-align: center;
-    background-color: var(--primary-color);
+@media (max-width: 659px) {
+  /*NAVBAR*/
+  .showcase-top {
+    padding: 26px 0px 0px 25px;
+  }
+  .showcase-top #logo {
+    height: 25px;
+  }
+  .showcase-top .submit {
+    position: relative;
+    right: 25px;
+    padding: 2px 10px;
+  }
+  .showcase-top select {
+    position: relative;
+    right: 40px;
+    padding: 2px 10px;
+  }
+  /* GET STARTED */
+  .showcase .get-started-container {
+    position: relative;
+    top: 60px;
+  }
+  .showcase .get-started-container h1 {
+    font-size: 2rem;
+    padding: 50px;
+    padding-bottom: 0px;
+  }
+  .showcase .get-started-container .para-1 {
     font-size: 1.5rem;
-    padding: 15px 32px;
-    border: none;
-    border-radius: 2px;
-    color: white;
+  }
+  .showcase .get-started-container .para-2 {
+    font-size: 1rem;
+  }
+  .showcase .get-started-container input {
+    padding: 14px;
+    width: 70%;
+  }
+  /* QUESTION SECTION STARTS */
+  .question-container button {
+    width: 100%;
+  }
+  .question-container .answer1,
+  .answer2,
+  .answer3,
+  .answer4,
+  .answer5,
+  .answer6 {
+    width: 100%;
+  }
+  /*EMAIL ADDRESS*/
+  .email-address-container input {
+    padding: 14px;
+    width: 70%;
+  }
 }
 
-.footer{
-    max-width: 70%;
-    margin: 1rem auto;
-    overflow: auto;
-}
-
-.footer ,
-.footer a{
-    color: #999999;
+@media (max-width: 500px) {
+  .showcase .get-started-container h1 {
+    font-size: 1.8rem;
+  }
+  .showcase .get-started-container .para-1 {
+    font-size: 1.3rem;
+  }
+  .showcase .get-started-container .para-2 {
     font-size: 0.9rem;
+  }
+  .showcase .get-started-container input {
+    padding: 12px;
+    width: 80%;
+  }
+  /*ENJOY ON YOUR TV*/
+  .main-section .section-container .right-column {
+    height: 270px;
+  }
+  /* DOWNLOAD YOUR SHOW TO WATCH OFFLINE */
+  .main-section .section2-container .left-column .box {
+    width: 100%;
+  }
+  /*EMAIL ADDRESS*/
+  .email-address-container input {
+    padding: 12px;
+    width: 80%;
+  }
+  /* FOOTER SECTION */
+  footer {
+    position: relative;
+  }
+  footer .content .box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle {
+    padding-left: 0;
+  }
 }
 
-.footer p{
-    margin-bottom: 1.5rem;
-}
-
-.footer .footer-cols{
-    display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    grid-gap: 2rem;
-}
-
-.footer li{
-    line-height: 2.4;
-}
-@media (min-width: 1254px) {
+@media (max-width: 346px) {
+  /*NAVBAR*/
+  .showcase-top #logo {
+    height: 22px;
+  }
+  .showcase-top .submit {
+    padding: 1px 5px;
+  }
+  .showcase-top select {
+    padding: 1px 0px;
+    position: relative;
+    right: 30px;
+  }
+  /* GET STARTED */
+  .showcase .get-started-container h1 {
+    font-size: 1.5rem;
+  }
+  .showcase .get-started-container .para-1 {
+    font-size: 1.1rem;
+  }
+  .showcase .get-started-container .para-2 {
+    font-size: 0.8rem;
+  }
 }
